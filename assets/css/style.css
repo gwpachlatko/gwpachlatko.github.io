@@ -20,23 +20,18 @@ a:focus, a:hover { color: #111; text-decoration: none; }
   padding: 0 auto;
   max-width: 111em;
 }
-
 .content > div {
   margin: 0 auto;
   border: 1px #eee solid;
   color: #000;
   padding: 30px;
-/*font-size: 130%;*/
-
 }
-
 .projekte li { margin-bottom: .809em; }
 .contact { background: #333 url(../images/watermark.png) center center no-repeat; }
 .contact h2, .contact p { color: #fff; }
 .contact a:link { color: #fff; }
 .contact a:visited { color: #999; }
 .contact a:focus, .contact a:hover { color: #999; text-decoration: none; }
-
 
 /* NAVIGATION */
 .nav-collapse ul { margin: 0; padding: 0; list-style: none; }
@@ -56,11 +51,6 @@ a:focus, a:hover { color: #111; text-decoration: none; }
 -ms-transition:background-color 1.0s ease-in-out,color 1.0s ease-in-out,border-color 1.0s ease-in-out;
 transition:background-color 1.0s ease-in-out,color 1.0s ease-in-out,border-color 1.0s ease-in-out;
 -webkit-tap-highlight-color:transparent; }
-.social li a:link, .button, .vendor-list li a:link, .vendor-link a:link { -moz-transition: background-color 1.0s ease-in-out,color 1.0s ease-in-out,border-color 1.0s ease-in-out;
--webkit-transition: background-color 1.0s ease-in-out,color 1.0s ease-in-out,border-color 1.0s ease-in-out;
--ms-transition:background-color 1.0s ease-in-out,color 1.0s ease-in-out,border-color 1.0s ease-in-out;
-transition:background-color 1.0s ease-in-out,color 1.0s ease-in-out,border-color 1.0s ease-in-out;
--webkit-tap-highlight-color:transparent; }
 .nav-collapse .active a,.nav-collapse a.current,.nav-collapse a:active,.nav-collapse a:focus,.nav-collapse a:hover { background:#fff;color:#000;outline:0; }
 
 @font-face { font-family:responsivenav;src:url(fonts/responsivenav.eot);src:url(fonts/responsivenav.eot?#iefix) format("embedded-opentype"),url(fonts/responsivenav.ttf) format("truetype"),url(fonts/responsivenav.woff) format("woff"),url(fonts/responsivenav.svg#responsivenav) format("svg"); }
@@ -72,7 +62,6 @@ transition:background-color 1.0s ease-in-out,color 1.0s ease-in-out,border-color
 .logo { float: left; font-weight: 400; padding: 17px 20px 0 50px; color: #fff; }
 
 
-
 @media screen and (min-width: 60em) {
   .js .nav-collapse { position: relative; }
   .js .nav-collapse.closed { max-height: none; }
@@ -82,3 +71,34 @@ transition:background-color 1.0s ease-in-out,color 1.0s ease-in-out,border-color
   .nav-collapse li { width: auto; }
   .nav-collapse a { padding:1.02em 2em;text-align:center;border-top:0;float:left;margin:0; }
 }
+
+/* night mode */
+body.night { background: #333; }
+body.night .banner { background: #111 url(../images/logo.png) 16px 16px no-repeat; height: 58px; }
+.toggle {
+    position: absolute;
+    top: 17px;
+    left: 300px;
+    background: #fff;
+    border: 2px solid #00151f;
+    width: 45px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.toggle.active { background: #00151f; border: 2px solid #fff; }
+.toggle:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background: #00151f;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.toggle.active:before { left: 27px; background: #fff; }
+body.night .content h2, body.night .content p { color: #fff; }
+body.night .content a:link { color: #999; }

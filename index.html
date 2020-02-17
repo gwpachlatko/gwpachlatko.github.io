@@ -28,84 +28,73 @@
 <body>
 <header class="banner fixed">
   <h1 class="logo">Gerald W. Pachlatko</h1>
+    <div class="toggle"></div>
   <nav class="nav-collapse">
     <ul>
 <li><a class="screenreader" href="#intro">Navigation &uml;berspringen</a></li>
 <li class="menu-item"><a href="#intro">Intro</a></li>
-<li class="menu-item"><a href="#blogs">Blogs</a></li>
-<li class="menu-item"><a href="#projekte">Projekte</a></li>
+<li class="menu-item"><a href="#emwd">Blogs</a></li>
+<li class="menu-item"><a href="#lazy">Projekte</a></li>
 <li class="menu-item"><a href="#kontakt">Kontakt</a></li>
     </ul>
   </nav>
 </header>
 
-<div role="main" class="content">
+<div id="main" role="main" class="content">
   <div id="intro" tabindex="-1">
 	<h2>Hallo, ich bin Gerald …</h2>
 	<figure>
 	  <p><img src="assets/images/portrait.jpg" alt="Geralds Portrait" /></p>
 	</figure>
   </div>
-
   <div><h2>Ich lebe in Wien …</h2>
+    <p>Ich bin österreichischer Webentwickler und –designer.</p>
+    <p>Aber in Wahrheit beschäftigt mich jede Art von Design und Entwicklung — manchmal so sehr, dass ich <a title="zu den Blogs" href="#blogs">darüber schreibe</a>. Ich liebe kreative Lösungen und bin davon überzeugt, dass die Form immer der Funktion folgen sollte.</p>
+    <p>Bin ich Minimalist? Ja. Je weniger Mittel zur Lösung einer Aufgabe nötig sind, umso besser. Das gilt für Kaffee, Zigaretten, Schokobananen oder wovon unsereins angeblich sonst noch lebt — und natürlich für Code.</p>
+  </div><!-- /intro -->
 
-<p>Ich bin österreichischer Webentwickler und –designer.</p>
-
-<p>Aber in Wahrheit beschäftigt mich jede Art von Design und Entwicklung — manchmal so sehr, dass ich <a title="zu den Blogs" href="#blogs">darüber schreibe</a>. Ich liebe kreative Lösungen und bin davon überzeugt, dass die Form immer der Funktion folgen sollte.</p>
-
-<p>Bin ich Minimalist? Ja. Je weniger Mittel zur Lösung einer Aufgabe nötig sind, umso besser. Das gilt für Kaffee, Zigaretten, Schokobananen oder wovon unsereins angeblich sonst noch lebt — und natürlich für Code.</p>
-</div><!-- /intro -->
-
-  <div id="blogs" tabindex="-1"><h2><abbr>EMWD</abbr>: Texte in deutscher Sprache</h2>
-
+  <div id="emwd" tabindex="-1"><h2><abbr>EMWD</abbr>: Texte in deutscher Sprache</h2>
     <figure>
       <p><img src="assets/images/emwd.png" alt="1 Minute Webdesign" /></p>
     </figure>
-
-<p><em>1 Minute Webdesign</em> wird zwar wie ein Blog geführt, aber in Wahrheit ist es eine Sammlung von deutschsprachigen Artikeln zum Thema. Das jeweilige Veröffentlichungsdatum sagt nichts darüber aus, wann sie geschrieben wurden.</p>
-
-<p><a title="zur Projektseite „1 Minute Webdesign“" href="https://gwpachlatko.github.io/emwd"><em>1 Minute Webdesign</em> lesen …</a></p>
+    <p><em>1 Minute Webdesign</em> wird zwar wie ein Blog geführt, aber in Wahrheit ist es eine Sammlung von deutschsprachigen Artikeln zum Thema. Das jeweilige Veröffentlichungsdatum sagt nichts darüber aus, wann sie geschrieben wurden.</p>
+    <p><a title="zur Projektseite „1 Minute Webdesign“" href="https://gwpachlatko.github.io/emwd"><em>1 Minute Webdesign</em> lesen …</a></p>
   </div>
 
-  <div><h2>Anything Goes …: Articles in English</h2>
-
+  <div id="anything"><h2>Anything Goes …: Articles in English</h2>
     <figure>
       <p><img src="assets/images/anything.png" alt="Anything Goes" /></p>
     </figure>
+    <p><em>Anything Goes …</em> is a repository of articles centering on possible approaches and solutions to a variety of common issues.</p>
 
-<p><em>Anything Goes …</em> is a repository of articles centering on possible approaches and solutions to a variety of common issues.</p>
+    <p><a href="https://gwpachlatko.github.io/anything-goes">Read <em>Anything Goes …</em></a></p>
+  </div><!-- /blogs -->
 
-<p><a href="https://gwpachlatko.github.io/anything-goes">Read <em>Anything Goes …</em></a></p>
-</div><!-- /blogs -->
-
-  <div id="projekte" tabindex="-1"><h2>Andere Projekte</h2>
-
+  <div id="lazy" tabindex="-1"><h2>Lazy Dogs</h2>
     <figure>
-      <p><img src="assets/images/projekte.png" alt="Andere Projekte" /></p>
+      <p><img src="assets/images/lazy.png" alt="Textgrafik: Lazy Dogs" /></p>
     </figure>
+    <p><em>Lazy Dogs</em> ist ein „Cheat Sheet“ und „Mini–Tutorial“ für sogenannte „Landing Pages“.</p>
+    <p><a title="das Projekt „Lazy Dogs“ auf GitHub ansehen" href="https://github.com/gwpachlatko/lazy-dogs">Quellcode ansehen</a></p>
+  </div><!-- /lazy -->
 
-<ul class="projekte">
-	<li>GitHub:
-    <ul>
-      <li><a title="das Projekt „Lazy Dogs“ auf GitHub ansehen" href="https://github.com/gwpachlatko/lazy-dogs">Lazy Dogs</a> (ein „Cheat Sheet“ und „Mini–Tutorial“ für Landing Pages)</li>
-      <li><a title="das Projekt „Jekyll Lesezeit“ auf GitHub ansehen" href="https://github.com/gwpachlatko/jekyll-lesezeit">Jekyll: Lesezeit</a> (mehrsprachige Wort– und Lesezeitanzeige für Jekyll)</li>
-    </ul>
-  </li>
-  <li>Mountain biking: wetterunabhängig</li>
-	<li>Fotografie: Wann immer es Zeit und Lichtverhältnisse zulassen …</li>
-	<li>Alltagsdesign: Semper et ubique</li>
-</ul>
-</div><!-- /projekte -->
+  <div id="lesezeit" tabindex="-1"><h2>Jekyll Lesezeit</h2>
+  <figure>
+    <p><img src="assets/images/lesezeit.png" alt="Textgrafik: Jekyll Lesezeit" /></p>
+  </figure>
+      <p><em>Jekyll Lesezeit</em> ist eine mehrsprachige Wort– und Lesezeitanzeige für Jekyll.</p>
+      <p><a title="das Projekt „Jekyll Lesezeit“ auf GitHub ansehen" href="https://github.com/gwpachlatko/jekyll-lesezeit">Quellcode ansehen</a></p>
+  </div><!-- /lesezeit -->
+
 
   <div id="kontakt" class="contact" tabindex="-1"><h2>Kontakt und rechtliche Hinweise</h2>
-<p>E–Mail: <a href="mailto:gwpachlatko@gmail.com">gwpachlatko@gmail.com</a></p>
-<p>GitHub: <a href="https://github.com/gwpachlatko">gwpachlatko</a></p>
-<p>LinkedIn: <a href="https://linkedin.com/in/gerald-w-pachlatko">gerald-w-pachlatko</a></p>
-<p>Diese Seite ist statisch und von Hand geschrieben. Sie verwendet keine Cookies und sammelt keine Daten.</p>
-<p>So handhabt GitHub den <a href="https://help.github.com/en/github/site-policy/github-privacy-statement">Umgang mit Benutzerdaten</a>.</p>
-
-  </div>
-</div><!-- /kontakt -->
+    <p>E–Mail: <a href="mailto:gwpachlatko@gmail.com">gwpachlatko@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/gwpachlatko">gwpachlatko</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/gerald-w-pachlatko">gerald-w-pachlatko</a></p>
+    <p>Diese Seite ist statisch und von Hand geschrieben. Sie verwendet keine Cookies und sammelt keine Daten.</p>
+    <p>So handhabt GitHub den <a href="https://help.github.com/en/github/site-policy/github-privacy-statement">Umgang mit Benutzerdaten</a>.</p>
+  </div><!-- /kontakt -->
+</div><!-- /main -->
 
 <!-- SMOOTH SCROLLING W/ PROPER FOCUSING -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -141,6 +130,16 @@ $(function() {
 </script>
 <!-- End of SMOOTH SCROLLING W/ PROPER FOCUSING -->
 
+<!-- SWITCH DAY AND NIGHT MODE -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.toggle').click(function(){
+            $('.toggle').toggleClass('active')
+            $('body').toggleClass('night')
+        })
+    })
+</script>
+<!-- End of SWITCH DAY AND NIGHT MODE -->
 
 <script src="assets/js/fastclick.js"></script>
 <script src="assets/js/scroll.js"></script>
