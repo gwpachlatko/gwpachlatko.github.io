@@ -14,7 +14,6 @@
 <meta property="og:contact" content="gwpachlatko@gmail.com" />
 <meta property="og:url" content="https://gwpachlatko.github.io/" />
 <link rel="canonical" href="https://gwpachlatko.github.io/" />
-<link href="https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="assets/css/style.min.css" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
@@ -127,38 +126,45 @@
 <script src="assets/js/responsive-nav.min.js"></script>
 
 <!-- SMOOTH SCROLLING W/ PROPER FOCUSING -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="assets/js/jquery-3.3.1.min.js"></script>
 <script>
-/* Basics lifted from a CSS Tricks demo (http://css-tricks.com/snippets/jquery/smooth-scrolling/), with focus() and URL hash updating added where commented */
-
-$(function() {
-  /* ADDED: make sections focusable */
-  $('div[id]').attr('tabindex', '-1');
-  /* end ADDED */
-  $('a[href*=#]:not([href=#])').click(function() {
-    var $linkElem = $(this);
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
       if (target.length) {
-        $('html,body').animate({
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
           scrollTop: target.offset().top
         }, 1000, function() {
-          /* ADDED: focus the target */
-          target.focus();
-          /* end ADDED */
-          /* ADDED: update the URL */
-          window.location.hash = $linkElem.attr('href').substring(1);
-         // window.location.hash = $(this).attr('href').substring(1, $(this).attr('href').length);
-          /* end ADDED */
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
         });
-        return false;
       }
     }
   });
-});
-</script>
-<!-- End of SMOOTH SCROLLING W/ PROPER FOCUSING -->
+  </script>
 
 <!-- SWITCH DAY AND NIGHT MODE -->
 <script type="text/javascript">
