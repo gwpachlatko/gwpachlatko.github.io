@@ -22,7 +22,7 @@ window.smoothScroll = (function (window, document, undefined) {
   // Default settings
   // Private {object} variable
   var _defaults = {
-    speed: 500,
+    speed: 150,
     easing: 'easeInOutCubic',
     updateURL: false,
     callbackBefore: function () {},
