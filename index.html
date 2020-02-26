@@ -15,7 +15,7 @@
 <meta property="og:contact" content="gwpachlatko@gmail.com" />
 <meta property="og:url" content="https://gwpachlatko.github.io/" />
 <link rel="canonical" href="https://gwpachlatko.github.io/" />
-<link rel="stylesheet" href="assets/css/style.min.css" />
+<link rel="preload" as="style" href="assets/css/style.min.css" onload="this.rel='stylesheet'" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
@@ -169,7 +169,7 @@ $('a[href*="#"]')
   </script>
 
 <!-- SWITCH DAY AND NIGHT MODE -->
-<script type="text/javascript">
+<script>
     $(document).ready(function(){
         $('.toggle').click(function(){
             $('.toggle').toggleClass('active')
