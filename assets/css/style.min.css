@@ -1,14 +1,13 @@
-@font-face{font-family:Alegreya;font-style:normal;font-weight:400;src:local('Alegreya Regular'),local('Alegreya-Regular'),url(https://fonts.gstatic.com/s/alegreya/v13/4UaBrEBBsBhlBjvfkSLhx6g.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap}@font-face{font-family:Alegreya;font-style:italic;font-weight:400;src:local('Alegreya Italic'),local('Alegreya-Italic'),url(https://fonts.gstatic.com/s/alegreya/v13/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap}
+@font-face{font-family:Alegreya;font-style:normal;font-weight:400;src:local('Alegreya Regular'),local('Alegreya-Regular'),url(https://fonts.gstatic.com/s/alegreya/v13/4UaBrEBBsBhlBjvfkSLhx6g.woff2) format('woff2');font-display:swap}
+@font-face{font-family:Alegreya;font-style:italic;font-weight:400;src:local('Alegreya Italic'),local('Alegreya-Italic'),url(https://fonts.gstatic.com/s/alegreya/v13/4UaHrEBBsBhlBjvfkSLk96rp5w.woff2) format('woff2');font-display:swap}
 *{margin:0;padding:0;font-size:100%;font:inherit;vertical-align:baseline}
-article, figcaption, figure,footer,header,menu,nav{display: block;}
+article,figcaption,figure,footer,header,menu,nav{display: block;}
 body{line-height: 1;position:relative;}
 ol,ul{list-style: none}
-[hidden] { display: none; }
+em{font-style:italic;}
+[hidden]{display:none;}
 html{scroll-behavior:smooth}
-.screenreader{position:absolute;top:-20em;left:-20em}
-.screenreader:focus{position:absolute;top:0;left:0}
-body{font-size:1em;line-height:1.618em;font-family:Alegreya,serif}
-.fixed{position:fixed;left:0;top:0;z-index:2;width:100%}
+body{font-size:1em;line-height:1.618em;font-family:Alegreya,serif}.fixed{position:fixed;left:0;top:0;z-index:2;width:100%}
 .banner{background:rgba(20,20,20,.8) url(../images/logo.png) 16px 16px no-repeat;height:58px}
 .logo{float:left;font-weight:400;padding:17px 20px 0 50px;color:#fff}
 h1{margin:0;font-weight:700;font-size:1.618em}
@@ -23,71 +22,51 @@ a:hover{color:#111;text-decoration:none}
 .content ul{list-style:none}
 .content{display:grid;grid-template-columns:repeat(auto-fit,minmax(464px,1fr));grid-gap:1em;margin:100px auto 42px;padding:0 auto;max-width:62em}
 .content>div{margin:0 auto;border:1px #eee solid;color:#000;padding:30px}
-.projekte li{margin-bottom:.809em}
 .contact{background:#333 url(../images/watermark.webp) center center no-repeat}
 .contact h2,.contact p{color:#fff}
 .contact a:link{color:#fff}
 .contact a:visited{color:#ccc}
 .contact a:focus,.contact a:hover{color:#ccc;text-decoration:none}
-
-/* navigation */
 .navigation { position: absolute; top: 16px; right: 20px; color: #fff;}
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:active, .sidenav a:focus, .sidenav a:hover, .sidebar .nav-active{
+.sidenav{height: 100%;width: 0;position: fixed;z-index: 2;top: 0;right: 0;background-color: #111;overflow-x: hidden;transition: 0.5s;padding-top: 60px;}
+.sidenav a {padding: 8px 8px 8px 32px;text-decoration: none;font-size: 25px;color: #818181;display: block;transition: 0.3s;}
+.sidenav a:active, .sidenav a:focus, .sidenav a:hover{
   color: #f1f1f1;
 }
-
+.active{background-color: rgba(60,0,0,.9);border-left: 10px solid rgba(128,0,0,1);
+}
 .opennav{position:absolute;top:-5px;right:0;border:1px solid #fff;border-radius:5px;width:35px;height:35px;cursor:pointer;background:#333;}
 .closenav{position:absolute;top:11px;right:20px;border:1px solid #fff;border-radius:5px;width:35px;height:35px;cursor:pointer;background:#333;}
 .closenav:before{content:'X';color:#fff;font-family: sans-serif;font-weight:700;}
-.opennav:before {
-content: "";
-position: absolute;
-top: 33%;
-right:25%;
-width:1em; /* 12px/16px */
-       height:.125em; /* 2px/16px */
-border-top: .375em double #fff; /* 6px/16px */
-border-bottom: .125em solid #fff; /* 2px / 16px */
-}
+.opennav:before {content: "";position: absolute;top: 33%;right:25%;width:1em;height:.125em;border-top: .375em double #fff;border-bottom: .125em solid #fff;}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
-
 body.night {background:#333}
 body.night .banner{background:#111 url(../images/logo.png) 16px 16px no-repeat;height:58px}
-.toggle{position:absolute;top:11px;left:300px;border:1px solid #fff;border-radius:5px;width:70px;height:35px;cursor:pointer;background:#333;}
-.toggle.active{border:1px solid #333;width:70px;cursor:pointer;background:#000}
+.toggle,.toggle.active {position:absolute;top:11px;left:300px;border:1px solid #fff;border-radius:5px;width:70px;height:35px;cursor:pointer;background:#333;}
 .toggle:before{position:absolute;top:4px;content:'\263D';color:#fff;left:35px;width:34px;font-size:20px;}
 .toggle.active:before{content:'\2600';color:#fff;left:0;width:34px;}
 body.night .content h2,body.night .content p{color:#fff}
 body.night .content a:link{color:#ccc}
 body.night .content a:visited{color:#666}
-.active{
-	color: rgba(255,255,255.1);
-	background-color: rgba(60,0,0,.9);
-	border-left: thick solid rgba(255,0,0,.6);
+@media (prefers-color-scheme: dark) {
+  body {background:#333}
+  body .banner{background:#111 url(../images/logo.png) 16px 16px no-repeat;height:58px}
+  .toggle,.toggle.active {position:absolute;top:11px;left:300px;border:1px solid #fff;border-radius:5px;width:70px;height:35px;cursor:pointer;background:#333;}
+  .toggle.active:before{position:absolute;top:4px;content:'\263D';color:#fff;left:35px;width:34px;font-size:20px;}
+  .toggle:before{content:'\2600';color:#fff;left:0;width:34px;}
+  body .content h2,body .content p{color:#fff}
+  body .content a:link{color:#ccc}
+  body .content a:visited{color:#666}
+
+  body.day {background:#fff}
+  body.day .banner{background:rgba(20,20,20,.8) url(../images/logo.png) 16px 16px no-repeat;height:58px}
+  .toggle,.toggle.active {position:absolute;top:11px;left:300px;border:1px solid #fff;border-radius:5px;width:70px;height:35px;cursor:pointer;background:#333;}
+  .toggle.active:before{position:absolute;top:4px;content:'\263D';color:#fff;left:35px;width:34px;font-size:20px;}
+  .toggle:before{content:'\2600';color:#fff;left:0;width:34px;}
+  body.day .content h2,body.day .content p{color:#000}
+  body.day .content a:link{color:#600}
+  body.day .content a:visited{color:#666}
 }
