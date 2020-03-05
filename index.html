@@ -25,22 +25,28 @@
 <link rel=canonical href=https://gwpachlatko.github.io/ >
 <script src=assets/js/lazysizes.min.js async></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#navigation">
 <header class="banner fixed">
 <h1 class=logo>Gerald W. Pachlatko</h1>
 <button class=toggle aria-label="Day/Night toggle"></button>
-<nav class=nav-collapse>
-<ul>
-<li><a class=screenreader href=#intro>Navigation &uuml;berspringen</a></li>
-<li class=menu-item><a href=#intro>Intro</a></li>
-<li class=menu-item><a href=#emwd>Blogs</a></li>
-<li class=menu-item><a href=#lazy>Projekte</a></li>
-<li class=menu-item><a href=#kontakt>Kontakt</a></li>
-</ul>
+
+<nav class="navigation">
+  <button class="opennav" id="navToggle" aria-label="Navigation öffnen" onclick="openNav()"></button>
+  <div id="mySidenav" class="sidenav">
+    <button class="closenav" aria-label="Navigation schließen" onclick="closeNav()"></button>
+    <ul class="navbar">
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#emwd">Blogs</a></li>
+    <li><a href="#lazy">Projekte</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+  </div>
 </nav>
+
+
 </header>
 <div id=main role=main class=content>
-<div id=intro tabindex=-1>
+<div id=intro tabindex="0">
 <h2>Hallo, ich bin Gerald …</h2>
 <figure>
 <p>
@@ -52,12 +58,12 @@
 </p>
 </figure>
 </div>
-<div><h2>Ich lebe in Wien …</h2>
+<div tabindex="0"><h2>Ich lebe in Wien …</h2>
 <p>Ich bin österreichischer Webentwickler und –designer.</p>
 <p>Aber in Wahrheit beschäftigt mich jede Art von Design und Entwicklung — manchmal so sehr, dass ich <a title="zu den Blogs" href=#blogs>darüber schreibe</a>. Ich liebe kreative Lösungen und bin davon überzeugt, dass die Form immer der Funktion folgen sollte.</p>
 <p>Bin ich Minimalist? Ja. Je weniger Mittel zur Lösung einer Aufgabe nötig sind, umso besser. Das gilt für Kaffee, Zigaretten, Schokobananen oder wovon unsereins angeblich sonst noch lebt — und natürlich für Code.</p>
 </div>
-<div id=emwd tabindex=-1><h2><abbr>EMWD</abbr>: Texte in deutscher Sprache</h2>
+<div id=emwd tabindex="0"><h2><abbr>EMWD</abbr>: Texte in deutscher Sprache</h2>
 <figure>
 <p>
 <picture>
@@ -70,7 +76,7 @@
 <p><em>1 Minute Webdesign</em> wird zwar wie ein Blog geführt, aber in Wahrheit ist es eine zeitlose Sammlung von deutschsprachigen Artikeln zum Thema. Das jeweilige Veröffentlichungsdatum sagt nichts darüber aus, wann sie geschrieben wurden.</p>
 <p><a title="zur Projektseite „1 Minute Webdesign“" href=https://gwpachlatko.github.io/emwd><em>1 Minute Webdesign</em> lesen</a></p>
 </div>
-<div id=anything><h2>Anything Goes …: Articles in English</h2>
+<div id=anything tabindex="0"><h2>Anything Goes …: Articles in English</h2>
 <figure>
 <p>
 <picture>
@@ -83,7 +89,7 @@
 <p><em>Anything Goes …</em> is a repository of articles centering on possible approaches and solutions to a variety of common issues.</p>
 <p><a href=https://gwpachlatko.github.io/anything-goes>Read <em>Anything Goes …</em></a></p>
 </div>
-<div id=lazy tabindex=-1><h2>Lazy Dogs</h2>
+<div id=lazy tabindex="0"><h2>Lazy Dogs</h2>
 <figure>
 <p>
 <picture>
@@ -96,7 +102,7 @@
 <p><em>Lazy Dogs</em> ist ein „Cheat Sheet“ und „Mini–Tutorial“ für sogenannte „Landing Pages“.</p>
 <p><a title="das Projekt „Lazy Dogs“ auf GitHub ansehen" href=https://github.com/gwpachlatko/lazy-dogs>Quellcode ansehen</a></p>
 </div>
-<div id=lesezeit tabindex=-1><h2>Jekyll Lesezeit</h2>
+<div id=lesezeit  tabindex="0"><h2>Jekyll Lesezeit</h2>
 <figure>
 <p>
 <picture>
@@ -109,7 +115,7 @@
 <p><em>Jekyll Lesezeit</em> ist eine mehrsprachige Wort– und Lesezeitanzeige für Jekyll. Derzeit verfügbar: Deutsch, Englisch, Französisch, Italienisch, Spanisch, Portugiesisch.</p>
 <p><a title="das Projekt „Jekyll Lesezeit“ auf GitHub ansehen" href=https://github.com/gwpachlatko/jekyll-lesezeit>Quellcode ansehen</a></p>
 </div>
-<div id=kontakt class=contact tabindex=-1><h2>Kontakt und rechtliche Hinweise</h2>
+<div id=kontakt class=contact tabindex="0"><h2>Kontakt und rechtliche Hinweise</h2>
 <p>E–Mail: <a href=mailto:gwpachlatko@gmail.com>gwpachlatko@gmail.com</a></p>
 <p>GitHub: <a href=https://github.com/gwpachlatko>gwpachlatko</a></p>
 <p>LinkedIn: <a href=https://linkedin.com/in/gerald-w-pachlatko>gerald-w-pachlatko</a></p>
@@ -117,12 +123,28 @@
 <p>So handhabt GitHub den <a href=https://help.github.com/en/github/site-policy/github-privacy-statement>Umgang mit Benutzerdaten</a>.</p>
 </div>
 </div>
-<script src=assets/js/responsive-nav.min.js></script>
-<script src=assets/js/jquery-3.4.1.min.js></script>
-<script>$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(t){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var e=$(this.hash);e=e.length?e:$("[name="+this.hash.slice(1)+"]"),e.length&&(t.preventDefault(),$("html, body").animate({scrollTop:e.offset().top},1e3,function(){var t=$(e);return t.focus(),!t.is(":focus")&&(t.attr("tabindex","-1"),void t.focus())}))}})</script>
-<script>$(document).ready(function(){$(".toggle").click(function(){$(".toggle").toggleClass("active"),$("body").toggleClass("night")})})</script>
-<script src=assets/js/fastclick.min.js></script>
-<script src=assets/js/scroll.min.js></script>
-<script src=assets/js/fixed-responsive-nav.js></script>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.toggle').click(function(){
+            $('.toggle').toggleClass('active')
+            $('body').toggleClass('night')
+        })
+    })
+</script>
+<script src="assets/js/highlighter.min.js"></script>
+
+
+
 </body>
 </html>
