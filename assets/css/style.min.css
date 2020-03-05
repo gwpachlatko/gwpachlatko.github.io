@@ -14,7 +14,7 @@ h1{margin:0;font-weight:700;font-size:1.618em}
 h2{margin-bottom:1em;font-weight700;font-size: 1.618em;line-height:1em}
 p{margin:.405em 0;line-height:1.618em}
 figure{margin:1em auto;padding:auto}
-img{width:100%;-webkit-box-shadow:2px 2px 5px 0 rgba(0,0,0,.75);-moz-box-shadow:2px 2px 5px 0 rgba(0,0,0,.75);box-shadow:2px 2px 5px 0 rgba(0,0,0,.75)}
+img{max-width:100%;height:auto;-webkit-box-shadow:2px 2px 5px 0 rgba(0,0,0,.75);-moz-box-shadow:2px 2px 5px 0 rgba(0,0,0,.75);box-shadow:2px 2px 5px 0 rgba(0,0,0,.75)}
 a:link{color:#600}
 a:visited{color:#111}
 a:hover{color:#111;text-decoration:none}
